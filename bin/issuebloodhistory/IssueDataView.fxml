@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="issuebloodhistory.IssueDataViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e42323" height="45.0" stroke="#e42323" strokeType="INSIDE" width="800.0" />
+      <Label layoutX="280.0" layoutY="52.0" text="Blood Issued Data" textFill="#e42323" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datepick" layoutX="41.0" layoutY="146.0" prefHeight="30.0" prefWidth="180.0" />
+      <ComboBox fx:id="combobgroup" layoutX="250.0" layoutY="146.0" prefHeight="30.0" prefWidth="180.0" promptText="Blood group" />
+      <Label layoutX="41.0" layoutY="115.0" text="Date of issue">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="462.0" layoutY="146.0" mnemonicParsing="false" onAction="#doFetchAll" prefHeight="30.0" prefWidth="115.0" text="Fetch All" />
+      <TableView fx:id="tblGrid" layoutX="41.0" layoutY="192.0" prefHeight="403.0" prefWidth="471.0" />
+      <Button layoutX="610.0" layoutY="146.0" mnemonicParsing="false" onAction="#doexport" prefHeight="30.0" prefWidth="115.0" text="Export data" />
+   </children>
+</AnchorPane>

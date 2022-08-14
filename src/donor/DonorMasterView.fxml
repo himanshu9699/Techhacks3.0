@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="600.0" minWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="donor.DonorMasterViewController">
+   <children>
+      <Label alignment="CENTER" layoutX="224.0" layoutY="10.0" text="Blood Donation Registration" textFill="#e42323" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+      <Label layoutX="40.0" layoutY="70.0" text="Mobile Number">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtmobile" layoutX="40.0" layoutY="95.0" prefHeight="30.0" prefWidth="150.0" />
+      <Button layoutX="247.0" layoutY="95.0" mnemonicParsing="false" onAction="#doFind" prefHeight="30.0" prefWidth="85.0" text="Find" />
+      <ImageView fx:id="imag" fitHeight="140.0" fitWidth="140.0" layoutX="590.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="590.0" layoutY="210.0" mnemonicParsing="false" onAction="#doBrowse" prefHeight="26.0" prefWidth="140.0" text="Browse Image" />
+      <Label layoutX="40.0" layoutY="140.0" text="Name">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtname" layoutX="40.0" layoutY="165.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label layoutX="250.0" layoutY="140.0" text="Gender">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="40.0" layoutY="210.0" text="Address">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtaddress" layoutX="40.0" layoutY="235.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label layoutX="250.0" layoutY="214.0" text="City/Town">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtcity" layoutX="250.0" layoutY="237.0" prefHeight="30.0" prefWidth="150.0" />
+      <Label layoutX="40.0" layoutY="280.0" text="Blood Group">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label layoutX="430.0" layoutY="140.0" text="Age">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtage" layoutX="430.0" layoutY="165.0" prefHeight="30.0" prefWidth="94.0" />
+      <Label layoutX="253.0" layoutY="280.0" text="Disease if any">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="txtdisease" layoutX="250.0" layoutY="305.0" prefHeight="30.0" prefWidth="150.0" />
+      <Separator layoutY="363.0" prefHeight="7.0" prefWidth="794.0" />
+      <Button layoutX="574.0" layoutY="409.0" mnemonicParsing="false" onAction="#doDelete" prefHeight="26.0" prefWidth="106.0" text="Delete" />
+      <Button layoutX="402.0" layoutY="409.0" mnemonicParsing="false" onAction="#doUpdate" prefHeight="26.0" prefWidth="106.0" text="Update" />
+      <Button layoutX="230.0" layoutY="409.0" mnemonicParsing="false" onAction="#doRegister" prefHeight="26.0" prefWidth="106.0" text="Register Now" />
+      <Button layoutX="38.0" layoutY="409.0" mnemonicParsing="false" onAction="#doNew" prefHeight="26.0" prefWidth="106.0" text="New" />
+      <ComboBox fx:id="combogender" layoutX="250.0" layoutY="165.0" prefHeight="30.0" prefWidth="150.0" />
+      <ComboBox fx:id="combobgroup" layoutX="40.0" layoutY="305.0" prefHeight="30.0" prefWidth="150.0" />
+      <ImageView fx:id="imgBlood" fitHeight="65.0" fitWidth="54.0" layoutX="144.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="goBack" layoutX="6.0" layoutY="6.0" mnemonicParsing="false" onAction="#goPanel" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: white;" text="Go back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
