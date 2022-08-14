@@ -203,7 +203,24 @@ public class PanelViewController {
     @FXML
     void goDeveloper(ActionEvent event) 
     {
-
+    	try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Developer/MeetDeveloper.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+            
+            
+            
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	// to hide the opened window
+		 
+		   Scene scene1=(Scene)btnlogout.getScene();
+		   scene1.getWindow().hide();
     }
     
     @FXML

@@ -17,4 +17,5 @@ module DonorProject {
 	opens donordata to javafx.graphics, javafx.fxml, javafx.base;
 	opens issuebloodhistory to javafx.graphics, javafx.fxml, javafx.base;
 	opens history to javafx.graphics, javafx.fxml, javafx.base;
+	opens Developer to javafx.graphics, javafx.fxml, javafx.base;
 }

@@ -136,7 +136,7 @@ public class DonorMasterViewController {
     {
     	FileChooser filechooser = new FileChooser();
     	filechooser.setTitle("Select image");
-    	filechooser.getExtensionFilters().addAll(new ExtensionFilter("JPG Files","*.jpg"), new ExtensionFilter("PNG Files", "*.png"));
+    	filechooser.getExtensionFilters().addAll(new ExtensionFilter("PNG Files", "*.png"), new ExtensionFilter("JPG Files","*.jpg"));
     	file = filechooser.showOpenDialog(null);
     	if(file!=null)
     	{

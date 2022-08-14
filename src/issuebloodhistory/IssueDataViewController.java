@@ -3,6 +3,7 @@ package issuebloodhistory;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.Writer;
 import java.net.URL;
 import java.sql.Connection;
@@ -18,11 +19,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 import panel.DatabaseConnection;
 
 public class IssueDataViewController {
@@ -35,11 +41,34 @@ public class IssueDataViewController {
 
     @FXML
     private TableView<IssueBean> tblGrid;
+    
+    @FXML
+    private Button goBack;
 
     Connection con;
     ResultSet table;
     
-    
+    @FXML
+    void goHistory(ActionEvent event) {
+    	try {
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/history/HistoryDataView.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));  
+            stage.show();
+            
+            
+            
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    	// to hide the opened window
+		 
+		   Scene scene1=(Scene)goBack.getScene();
+		   scene1.getWindow().hide();
+    }
     
     void doSetValues()
     {
